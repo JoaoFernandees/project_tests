@@ -1,0 +1,48 @@
+<po-page-default 
+  [p-actions]="acoesPagina"
+  p-title="Cadastro">
+  <form [formGroup]="form.form">
+    <po-input
+      formControlName="nome"
+      id="nomeCondutor"
+      name="nome"
+      p-label="Nome"
+      p-placeholder="Informe o nome do condutor"
+      [p-minlength]=2
+      p-clean="true">
+    </po-input>
+    
+    <po-input
+      formControlName="cpf"
+      id="cpfCondutor"
+      name="cpf"
+      p-label="CPF"
+      p-placeholder="Informe o CPF"
+      p-mask="999.999.999-99"
+      [p-minlength]=14
+      p-clean="true">
+    </po-input>
+
+    <po-input
+      formControlName="cnh"
+      id="cnhCondutor"
+      name="cnh"
+      p-label="CNH"
+      p-placeholder="Informe a CNH do condutor"
+      [p-minlength]=11
+      [p-maxlength]=11
+      p-clean="true">
+    </po-input>
+
+    <po-input
+      formControlName="telefone"
+      id="telefoneCondutor"
+      name="telefone"
+      p-label="Telefone"
+      p-placeholder="Informe o telefone"
+      p-mask="(+99) (99) 99999-9999"
+      [p-maxlength]=21
+      p-clean="true">
+    </po-input>
+  </form>
+</po-page-default>
