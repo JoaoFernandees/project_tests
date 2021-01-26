@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { PoPageAction } from '@po-ui/ng-components';
+import { PoMultiselectOption, PoPageAction } from '@po-ui/ng-components';
 import { CondutorForm } from '../condutor-form/condutor.form';
 
 @Component({
@@ -22,11 +22,15 @@ export class CadastroComponent implements OnInit {
     return [
       {
         label: 'Salvar',
-        action: this.salvar.bind(this),
-        // disabled: this.formEdicao.formGroup.invalid
+        action: this.salvar.bind(this)
       }
     ];
   }
+
+  optionsMultiselect: Array<PoMultiselectOption> = [
+    { value: 'masculino', label: 'Masculino' },
+    { value: 'feminino', label: 'Feminino' }
+  ];
 
   ngOnInit(): void {
   }
