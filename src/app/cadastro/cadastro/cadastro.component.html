@@ -44,5 +44,12 @@
       [p-maxlength]=21
       p-clean="true">
     </po-input>
+
+    <po-multiselect 
+      name="sexoCondutor"
+      formControlName="sexoCondutor"
+      p-label="Selecione o sexo"
+      [p-options]="optionsMultiselect">
+    </po-multiselect>
   </form>
 </po-page-default>

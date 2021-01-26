@@ -1,4 +1,5 @@
 import { browser } from 'protractor';
+import { __awaiter } from 'tslib';
 import { CadastroPage } from "./cadastro.po"
 
 describe('cadastro.e2e-spec | Cadastro', () => {
@@ -29,5 +30,14 @@ describe('cadastro.e2e-spec | Cadastro', () => {
 
     // => Seta valor no input de telefone do condutor
     await page.inputTelefoneCondutor.sendKeys('1234567890123');
+
+    // => Expande multiselect de sexo do condutor
+    await page.multiselectSexoCondutor.click();
+
+    // => Seleciona valor de masculino no multiselect de sexo do condutor
+    await page.multiselectSexoCondutorValueMasculino.click();
+
+    // => Seleciona valor de feminino no multiselect de sexo do condutor
+    await page.multiselectSexoCondutorValueFeminino.click();    
   })
 })

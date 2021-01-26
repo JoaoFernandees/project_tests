@@ -27,6 +27,10 @@ export class CondutorForm {
     return this.form.get('cnh');
   }
 
+  get sexoMultiselect() {
+    return this._form.get('sexoCondutor')
+  }
+
   get form(): FormGroup {
     return this._form;
   }
@@ -40,7 +44,8 @@ export class CondutorForm {
       nome: [''],
       cnh: [''],
       validadeCnh: [''],
-      telefone: ['', [Validators.maxLength(14)]]
+      telefone: ['', [Validators.maxLength(14)]],
+      sexoCondutor: ['']
     });
   }
 }
